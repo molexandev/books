@@ -1,0 +1,23 @@
+$default: #1B3764;
+$hover: #4d7ecc;
+$accent: #FFCA42;
+$textwhite: #F6F8FC;
+%btn{
+   @extend %cardo-400;
+   background-color: $accent;
+   font-size: 19px;
+   line-height: 28px;
+   letter-spacing: 0.57px;
+   text-transform: capitalize;
+   color: $default;
+   border: none;
+   cursor: pointer;
+}
+%cardo-400{
+   font-family: 'Cardo-Regular', sans-serif;
+   font-weight: 400;
+}
+%inter-400{
+   font-family: 'Inter-Regular', sans-serif;
+   font-weight: 400;
+}
