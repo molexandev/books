@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
@@ -9,8 +9,49 @@
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-   <header>
-
+   <header class="header">
+      <div class="container">
+         <div class="header__wrapper">
+            <div class="header__left">
+               <a class="logo" href="#">
+                  <img class="logo__img" src="../images/logo.svg" alt="image logo">
+               </a>
+               <div class="socials">
+                  <a class="socials__link" href="#">
+                     <img class="socials__img" src="../images/facebook.png" alt="image facebook">
+                  </a>
+                  <a class="socials__link" href="#">
+                     <img class="socials__img" src="../images/twiter.png" alt="image twiter">
+                  </a>
+                  <a class="socials__link" href="#">
+                     <img class="socials__img" src="../images/linkedin.png" alt="image linkedin">
+                  </a>
+               </div>
+            </div>
+            <div class="header__right">
+               <nav class="menu">
+                  <ul class="menu__items">
+                     <li class="menu__item">
+                        <a class="menu__link menu__link--active" href="#">Home</a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link" href="#">About</a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link" href="#">Pages</a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu__link" href="#">Contact Us</a>
+                     </li>
+                  </ul>
+               </nav>
+               <a class="cart" href="#">
+                  <img class="cart__img" src="../images/cart.svg" alt="cart image">
+               </a>
+               <button class="header__btn">Order Today</button>
+            </div>
+         </div>
+      </div>
    </header>
 
 <footer>footer</footer>
