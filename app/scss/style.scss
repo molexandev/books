@@ -26,12 +26,7 @@
    &__btn{
       width: 222px;
       height: 66px;
-      @extend %btn;
-      transition: all .2s;
-      &:hover{
-         color: $accent;
-         background-color: $hover;
-      }
+      @extend %btn;      
    }
 }
 .logo{
@@ -67,7 +62,6 @@
       margin-left: 50px;
    }
    &__link{
-      @extend %inter-400;
       font-size: 17px;
       line-height: 26px;
       letter-spacing: 0.17px;
@@ -86,11 +80,303 @@
    margin-right: 50px;
 }
 
+// ==========     TOP-CONTENT     ==========
 
 
+.top-content{
+   &__inner{
+      background-color: $default;
+      padding: 100px 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 110px;
+   }
+   &__left{
+      margin-left: 23px;
+      margin-right: 75px;
+   }
+   &__subtitle{
+      @extend %cardo-400;
+      font-size: 21px;
+      line-height: 36px;
+      letter-spacing: 1.2px;
+      text-transform: capitalize;
+      color: #FFFFFF;
+      position: relative;
+      padding-left: 49px;
+      margin-bottom: 10px;
+      &::before{
+         content: '';
+         position: absolute;
+         width: 35px;
+         height: 2px;
+         top: 18px;
+         left: 0;
+         background-color: $accent;
+      }
+   }
+   &__title{
+      @extend %cardo-400;
+      font-size: 64px;
+      line-height: 78px;
+      letter-spacing: 1.3px;
+      color: #FFFFFF;
+      max-width: 535px;
+      margin-bottom: 24px;
+   }
+   &__text{
+      font-size: 18px;
+      line-height: 28px;
+      color: $text-color;
+      max-width: 562px;
+      margin-bottom: 20px;
+   }
+   &__buttons{
+      margin-bottom: 50px;
+   }
+   &__btn{
+      width: 222px;
+      height: 66px;
+      @extend %btn;
+      margin-right: 50px;
+   }
+   &__link{
+      @extend %cardo-400;
+      font-size: 19px;
+      line-height: 30px;
+      letter-spacing: 0.38px;
+      text-transform: capitalize;
+      color: #FFFFFF;
+      width: 152px;
+      height: 31px;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid #fff;
+      transition: all .2s;
+      &:hover{
+         color: $accent;
+         border-bottom: 1px solid $accent;
+      }
+   }
+   &__info{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__item{
+      padding-left: 26px;
+      position: relative;
+      &::before{
+         content: '';
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         top: 6px;
+         left: 0;
+         border-radius: 50%;
+         background-color: $accent;
+      }
+   }
+   &__item-title{
+      @extend %cardo-400;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.48px;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+   }
+   &__item-info{
+      font-size: 17px;
+      line-height: 27px;
+      color: $text-color;
+   }
+   &__right{
+      max-width: 592px;
+      max-height: 800px;
+   }
+   &__img{
+      height: 800px;
+   }
+}
+.autors-books {
+   &__inner {
+      padding: 0 70px;
+	}
+	&__items {
+      display: flex;
+      justify-content: space-between;
+	}
+	&__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 500px;
+	}
+	&__img-inner {
+      margin-right: 30px;
+      min-width: 285px;
+	}
+	&__img {
+      width: 285px;
+      height: 382px;
+      object-fit: contain
+	}
+	&__subtitle {
+      @extend %cardo-400;
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: 0.32px;
+      color: $default;
+      margin-bottom: 7px;
+	}
+	&__price {
+      font-size: 21px;
+      line-height: 33px;
+      color: $accent;
+      margin-bottom: 17px;
+	}
+	&__text {
+      font-size: 19px;
+      line-height: 28px;
+      color: #969AA0;
+      margin-bottom: 13px;
+	}
+	&__kind {
+      @extend %cardo-400;
+      font-size: 24px;
+      line-height: 29px;
+      color: $default;
+      padding-left: 26px;
+      margin-bottom: 27px;
+      position: relative;
+      &::before{
+         content: '';
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         top: 6px;
+         left: 0;
+         border-radius: 50%;
+         background-color: $accent;
+      }
+	}
+	&__btn {
+      width: 206px;
+      height: 66px;
+      border: 2px solid $accent;
+      @extend %cardo-400;
+      font-size: 19px;
+      line-height: 28px;     
+      letter-spacing: 0.38px;
+      color: $default;
+      background-color: inherit;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover{
+         background-color: $accent;
+         border: 2px solid $default;
+      }
+	}
+}
 
 
+// ==========     FOOTER     ==========
+.footer-wrapper{
+   background-color: $default;
+   padding: 60px 70px 0;
+}
+.footer-top {
+   display: flex;
+   justify-content: space-between;
+	&__socials {
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+	}
+	&__title {
+      @extend %cardo-400;
+      font-size: 24px;
+      line-height: 34px;
+      letter-spacing: 0.384px;
+      color: #FFF;
+      margin-bottom: 24px;
+	}
+	&__list-item {
+      margin-bottom: 10px;
+      padding-left: 29px;
+      position: relative;
+      &::after{
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 13px;
+         background-image: url(../images/dots.svg);
+         background-repeat: no-repeat;
+         width: 18px;
+         height: 4px;
+      }
+	}
+	&__link {
+      font-size: 18px;
+      line-height: 31px;
+      letter-spacing: 0.18px;
+      color: $text-color;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+	}
+	&__contact-block {
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: start;
+      &:last-child{
+         margin-bottom: 0;
+      }
+	}
+	&__subtitle {
+      @extend %cardo-400;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.36px;
+      color: #FFF;
+      display: block;
+      min-width: 80px;
+      margin-right: 17px;
+	}
+	&__contacts {
+      font-size: 17px;
+      line-height: 27px;
+      color: $text-color;
+      max-width: 234px;
+      display: inline-block;
+	}
+}
 
+.footer-bottom {
+	&__inner {
+      display: flex;
+      justify-content: center;
+	}
+	&__item {
+         font-size: 17px;
+         line-height: 26px;
+         text-align: center;
+         letter-spacing: 0.17px;
+         padding: 25px 0;
+	}
+	&__drafter {
+      color: $text-color;
+	}
+	&__person {
+      color: #FFFFFF;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+
+	}
+}
 
 
 

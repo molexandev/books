@@ -1,6 +1,7 @@
 $default: #1B3764;
 $hover: #4d7ecc;
 $accent: #FFCA42;
+$text-color: #B4C7E7;
 $textwhite: #F6F8FC;
 %btn{
    @extend %cardo-400;
@@ -12,6 +13,11 @@ $textwhite: #F6F8FC;
    color: $default;
    border: none;
    cursor: pointer;
+   transition: all .2s;
+      &:hover{
+         color: $accent;
+         background-color: $hover;
+      }
 }
 %cardo-400{
    font-family: 'Cardo-Regular', sans-serif;
@@ -21,3 +27,4 @@ $textwhite: #F6F8FC;
    font-family: 'Inter-Regular', sans-serif;
    font-weight: 400;
 }
+
