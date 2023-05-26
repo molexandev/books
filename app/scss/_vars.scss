@@ -3,6 +3,7 @@ $hover: #4d7ecc;
 $accent: #FFCA42;
 $text-color: #B4C7E7;
 $textwhite: #F6F8FC;
+$textgray: #969AA0;
 %btn{
    @extend %cardo-400;
    background-color: $accent;
@@ -27,4 +28,3 @@ $textwhite: #F6F8FC;
    font-family: 'Inter-Regular', sans-serif;
    font-weight: 400;
 }
-
