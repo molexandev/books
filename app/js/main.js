@@ -1,4 +1,8 @@
 $(function(){
+
+   $('.menu__btn').on('click', function () {
+      $('.menu__items').toggleClass('menu__items--active');
+   });
    
    $(".response__rating").rateYo({
       // rating: 3.6,

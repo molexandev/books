@@ -32,10 +32,12 @@
 }
 .logo{
    margin-right: 35px;
+   min-width: 119px;
 }
 .socials{
    display: flex;
    justify-content: start;
+   min-width: 165px;
    &__link{
       margin-right: 10px;
       transition: all .2s;
@@ -75,6 +77,9 @@
    }
    &__link--active{
       color: $accent;
+   }
+   &__btn{
+      display: none;
    }
 }
 .cart{
@@ -897,40 +902,6 @@
    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ==========     FOOTER     ==========
 
 .footer-wrapper{
@@ -1029,7 +1000,4 @@
 
 	}
 }
-
-
-
 @import 'media';
