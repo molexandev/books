@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'libs';
 @import 'fonts';
 @import 'reset';
 @import 'global';
@@ -638,8 +639,6 @@
             background-color: $hover;
          }
    }
-   &__info {
-   }
    &__description {
       text-align: center;
       margin: 0 auto;
@@ -664,19 +663,239 @@
    }
 }
 
+// ==========    RESPONSE      ==========
 
 
+.readers {
+   &__inner {
+      padding: 120px 70px 130px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__title {
+      @extend %cardo-400;  
+      font-size: 42px;
+      line-height: 50px;
+      text-transform: capitalize;
+      color: $default;
+      max-width: 329px;
+      padding-bottom: 23px;
+      position: relative;
+      margin-bottom: 33px;
+      &::after{
+         content: '';
+         position: absolute;
+         width: 50px;
+         height: 3px;
+         bottom: 0;
+         left: 0;
+         background-color: $accent;
+      }
+   }
+   &__text {
+      font-size: 19px;
+      line-height: 34px;
+      color: $textgray;
+      max-width: 435px;
+      margin-bottom: 13px;
+   }
+   &__rating {
+      position: relative;
+      margin-bottom: 12px;
+   }
+   &__rating-info{
+      position: absolute;
+      left: 130px;
+      top: 0;
+   }
+   &__customers {
+      font-size: 18px;
+      line-height: 28px;
+      color: $default;
+   }
+}
+.response {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 782px;
+   height: 604px;
+   gap: 20px;
+   overflow: hidden;
+   &__item {
+      width: 381px;
+      height: 292px;
+      background-color: $default;
+   }
+   &__top {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 20px;
+   }
+   &__img {
+      width: 85px;
+      height: 85px;
+      object-fit: cover;
+      margin: 30px 20px 0 35px;
+   }
+   &__name {
+      @extend %cardo-400;  
+      font-size: 24px;
+      line-height: 29px;
+      color: #FFF;
+      margin-bottom: 15px;
+   }
+   &__title {
+      @extend %cardo-400;  
+      font-size: 22px;
+      line-height: 33px;
+      color: #FFF;
+      margin-bottom: 13px;
+      margin-left: 35px;
+   }
+   &__text {
+      font-size: 18px;
+      line-height: 29px;
+      color: $text-color;
+      margin-left: 35px;
+      margin-bottom: 24px;
+      margin-right: 56px;
+   }
+}
+
+// ==========    ARTICLES      ==========
 
 
+.articles {
+   &__wrapper {
+      background-color: #f4f8ff;
+      padding: 110px 70px;
+      margin-bottom: 120px;
+   }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__item {
+      max-width: 420px;
+      background-color: #fff;
+   }
+   &__img {
+      width: 420px;
+      height: 350px;
+      object-fit: cover;
+      margin-bottom: 25px;
+   }
+   &__subtitle {
+      @extend %cardo-400;  
+      font-size: 24px;
+      line-height: 34px;
+      letter-spacing: 0.24px;
+      color: $default;
+      padding-left: 30px;
+      width: 330px;
+      margin-bottom: 19px;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+      }
+   }
+   &__text {
+      font-size: 19px;
+      line-height: 30px;
+      color: $textgray;
+      padding-left: 30px;
+      max-width: 358px;
+      margin-bottom: 13px;
+   }
+   &__info-box{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      margin-bottom: 30px;
+   }
+   &__readmore {
+      @extend %cardo-400;  
+      font-size: 19px;
+      line-height: 23px;
+      letter-spacing: 0.38px;
+      text-transform: capitalize;
+      color: $default;
+      border-bottom: 2px solid $default;
+      padding-right: 9px;
+      transition: all .2s;
+      &:hover{
+         color: $hover;
+         border-bottom: 2px solid $hover;
+      }
+   }
+   &__date {
+      font-size: 16px;
+      line-height: 26px;
+      color: $default;
+   }
+}
 
+// ==========    SUBSCRIPTION      ==========
 
-
-
-
-
-
-
-
+.subscription {
+   &__wrapper {
+      margin: 0 70px 120px;
+      padding-top: 100px;
+      text-align: center;
+      background-color: $accent;
+   }
+   &__title {
+      margin-bottom: 25px;
+      position: relative;
+      &::after{
+         background-color: $default;
+      }
+   }
+   &__text {
+      font-size: 18px;
+      line-height: 28px;
+      color: $default;
+      max-width: 550px;
+      margin: 0 auto 50px;
+   }
+   &__form {
+      padding-bottom: 115px;
+   }
+   &__input {
+      width: 656px;
+      height: 70px;
+      border: 1px solid #DCE1E9;
+      padding: 20px 40px;
+      outline: none;
+   }
+   &__input[placeholder]{
+      font-size: 18px;
+      line-height: 31px;
+      letter-spacing: 0.18px;
+      color: $text-color;
+   }
+   &__btn {
+      width: 328px;
+      height: 70px;
+      background: $default;
+      border: 2px solid $default;
+      font-size: 18px;
+      line-height: 31px;
+      text-align: center;
+      letter-spacing: 0.18px;
+      color: #fff;
+      transition: all .2s;
+      cursor: pointer;
+      &:hover{
+         background-color: $hover;
+      }
+   }
+}
 
 
 
