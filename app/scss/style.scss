@@ -222,6 +222,9 @@
       height: 800px;
    }
 }
+
+// ==========    AUTORS BOOK      ==========
+
 .autors-books {
    &__inner {
       padding: 0 70px;
@@ -229,6 +232,7 @@
 	&__items {
       display: flex;
       justify-content: space-between;
+      gap: 15px;
       margin-bottom: 150px;
 	}
 	&__item {
