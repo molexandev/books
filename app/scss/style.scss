@@ -5,6 +5,11 @@
 @import 'global';
 
 .header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
    &__wrapper{
       background-color: $default;
       max-width: 1440px;
@@ -87,8 +92,9 @@
 }
 
 // ==========     TOP-CONTENT     ==========
-
-
+.main{
+   padding-top: 110px;
+}
 .top-content{
    &__inner{
       background-color: $default;
@@ -112,6 +118,8 @@
       position: relative;
       padding-left: 49px;
       margin-bottom: 10px;
+      animation-duration: 1s;
+      animation-delay: .2s;
       &::before{
          content: '';
          position: absolute;
@@ -130,6 +138,8 @@
       color: #FFFFFF;
       max-width: 535px;
       margin-bottom: 24px;
+      animation-duration: 1s;
+      animation-delay: .5s;
    }
    &__text{
       font-size: 18px;
@@ -137,9 +147,13 @@
       color: $text-color;
       max-width: 562px;
       margin-bottom: 20px;
+      animation-duration: 1s;
+      animation-delay: .7s;
    }
    &__buttons{
       margin-bottom: 50px;
+      animation-duration: 1s;
+      animation-delay: .9s;
    }
    &__btn{
       width: 222px;
@@ -168,6 +182,8 @@
    &__info{
       display: flex;
       justify-content: space-between;
+      animation-duration: 1s;
+      animation-delay: 1.5s;
    }
    &__item{
       padding-left: 26px;
@@ -199,6 +215,8 @@
    &__right{
       max-width: 592px;
       max-height: 800px;
+      animation-duration: 1s;
+      animation-delay: .2s;
    }
    &__img{
       height: 800px;

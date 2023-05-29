@@ -16,6 +16,50 @@
       height: 50px;
    }
 }
+
+/*     TOP CONTENT     */
+
+.top-content{
+   &__inner{
+      margin-bottom: 50px;
+      padding: 50px 70px;
+   }
+   &__left{
+      margin-right: 50px;
+   }
+   &__title{
+      font-size: 36px;
+      line-height: 68px;
+   }
+   &__btn{
+      width: 170px;
+      height: 50px;
+      margin-right: 15px;
+   }
+   &__link{
+      font-size: 16px;
+      line-height: 24px;
+      width: 132px;
+   }
+   &__item-title{
+      font-size: 16px;
+      line-height: 24px;
+   }
+   &__item-info{
+      font-size: 14px;
+      line-height: 21px;
+   }
+   &__right{
+      max-width: 592px;
+      max-height: 800px;
+      animation-duration: 1s;
+      animation-delay: .2s;
+   }
+   &__img{
+      object-fit: contain;
+      height: auto;
+   }
+}
 }
 @media (max-width:992px){
 .header {
@@ -23,8 +67,7 @@
       width: 130px;
       height: 35px;
       font-size: 14px;
-	}
-}
+	}}
 
 .logo {
    margin-right: 15px;
@@ -50,8 +93,54 @@
 .cart {
    margin-right: 20px;
 }
+
+/*     TOP CONTENT     */
+
+.top-content{
+   &__inner{
+      margin-bottom: 50px;
+      padding: 50px 70px;
+   }
+   &__subtitle{
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 20px;
+   }
+   &__title{
+      font-size: 26px;
+      line-height: 39px;
+   }
+   &__text{
+      font-size: 16px;
+   }
+   &__btn{
+      margin-bottom: 20px;
+   }
+   &__link{
+      font-size: 16px;
+      line-height: 24px;
+      width: 132px;
+   }
+   &__info{
+      flex-wrap: wrap;
+   }
+   &__item{
+      margin-bottom: 12px;
+   }
+   &__item-title{
+      margin-bottom: 0;
+   }
+   &__item-info{
+      font-size: 14px;
+      line-height: 21px;
+   }
+}
 }
 @media (max-width:768px){
+.main{
+   position: relative;
+   z-index: 1;
+}
 .menu {
 	&__items {
       position: absolute;
@@ -124,6 +213,34 @@
       background-color: $accent;
    }
 }
+/*     TOP CONTENT     */
+
+.top-content{
+   &__inner{
+      flex-wrap: wrap;
+      padding: 30px 50px;
+   }
+   &__left{
+      margin: 0 auto;
+   }
+   &__title{
+      font-size: 36px;
+      line-height: 54px;
+   }
+   &__info{
+      margin-bottom: 30px;
+   }
+   &__item{
+      margin-bottom: 12px;
+   }
+   &__item-title{
+      margin-bottom: 0;
+   }
+   &__right{
+      animation-duration: 1s;
+      animation-delay: 1.7s;
+   }
+}
 }
 @media (max-width:550px){
    .socials{
@@ -148,8 +265,10 @@
    }
 }
 @media (max-width:370px){
-   .cart {
-      display: none;
+   .header{
+      &__btn{
+         display: none;
+      }
    }
    .logo{
       margin-right: 5px;
