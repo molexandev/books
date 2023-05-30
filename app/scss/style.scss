@@ -311,6 +311,11 @@
 // ==========    ABOUT AUTOR      ==========
 
 .about-autor {
+   .img-animated{
+      bottom: 50px;
+      right: 50px;
+      transition: all 3s;
+   }
    &__inner {
       background-color: $textwhite;
       display: flex;
@@ -330,8 +335,8 @@
       height: 620px;
       object-fit: cover;
       position: absolute;
-      right: 50px;
-      bottom: 50px;
+      right: 0px;
+      bottom: 0px;
       filter: drop-shadow(0px 0px 20px rgba(27, 55, 100, 0.3));
    }
    &__title {

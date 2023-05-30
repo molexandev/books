@@ -1,5 +1,57 @@
 $(function(){
 
+    (function () {
+      var square = document.querySelector('.animation-block');
+    
+      var observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+            return;
+          }
+    
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__fadeInUp');
+          }
+        });
+      });
+    
+      observer.observe(square);
+    })();
+
+
+    
+
+      (function () {
+      var squareImage = document.querySelector('.about-autor__img');
+    
+      var observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+            return;
+          }
+    
+          if (entry.isIntersecting) {
+            entry.target.classList.add('img-animated');
+          }
+        });
+      });
+    
+      observer.observe(squareImage);
+    })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    $('.menu__btn').on('click', function () {
       $('.menu__items').toggleClass('menu__items--active');
    });

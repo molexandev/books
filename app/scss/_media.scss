@@ -1,10 +1,25 @@
+@media (max-width: 1400px){
+   // ==========    ABOUT AUTOR      ==========
+.about-autor {
+   &__autor {
+      margin-right: 100px;
+   }
+   &__text {
+      font-size: 16px;
+      line-height: 28px;
+   }
+   &__index {
+      border-right:none;
+   }
+}
+}
 @media (max-width:1250px){
 .menu {
 	&__item + .menu__item {
       margin-left: 15px;
 	}
    &__link {
-      font-size: 15px;
+      font-size: 14px;
 	}
 }
 .header {
@@ -60,6 +75,24 @@
       height: auto;
    }
 }
+// ==========    ABOUT AUTOR      ==========
+.about-autor {
+   &__info{
+      max-width: 450px;
+   }
+   &__autor {
+      margin-right: 50px;
+   }
+   &__index {
+      border-right:none;
+   }
+   &__contacts{
+      width: 435px;
+   }
+   &__data{
+      padding: 0;
+   }
+}
 }
 
 @media (max-width: 1150px){
@@ -68,6 +101,10 @@
          &__inner {
             padding: 0 30px;
       	}
+         &__items{
+            margin-bottom: 50px;
+            justify-content: center;
+         }
       	&__item {
             height: auto;
       	}
@@ -105,6 +142,30 @@
             height: 50px;
       	}
       }
+// ==========    ABOUT AUTOR      ==========
+.about-autor {
+   &__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   &__autor {
+      margin-right: 0;
+      margin-bottom: 50px;
+   }
+   &__text {
+      font-size: 16px;
+      line-height: 28px;
+   }
+   &__index {
+      border-right:none;
+   }
+   &__contacts{
+      width: 435px;
+   }
+   &__data{
+      padding: 0;
+   }
+}
 }
 @media (max-width:992px){
 .header {
@@ -329,7 +390,52 @@
    }
 
 }
-
+// ==========    ABOUT AUTOR      ==========
+.about-autor {
+   .img-animated{
+      right: 25px;
+      bottom: 25px;
+   }
+   &__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 0;
+   }
+   &__info{
+      max-width: 370px;
+      padding: 0;
+   }
+   &__title{
+      font-size: 24px;
+      line-height: 36px;
+   }
+   &__autor {
+      min-width: 0;
+      height: auto;
+   }
+   &__img{
+      position: relative;
+      min-width: auto;
+      height: auto;
+   }
+   &__text {
+      font-size: 16px;
+      line-height: 28px;
+   }
+   &__indexes{
+      flex-wrap: wrap;
+   }
+   &__contacts{
+      width: 100%;
+      flex-wrap: wrap;
+      height: auto;
+      justify-content: center;
+   }
+   &__qr{
+      margin-bottom: 20px;
+      margin-right: 0;
+   }
+}
 
 }
 @media (max-width:550px){
@@ -363,6 +469,9 @@
       &__btn{
          display: none;
       }
+      &__left{
+         max-width: 40%;
+      }
    }
    .logo{
       margin-right: 5px;
@@ -370,29 +479,52 @@
          max-width: 80%;
       }
    }
-   .header{
-      &__left{
-         max-width: 40%;
+   .menu{
+      &__items{
+         top: 90px;
       }
    }
    .main{
       padding-top: 70px;
    }
-}
-/*     TOP CONTENT     */
-
-.top-content{
-   &__title{
-      font-size: 24px;
-      line-height: 36px;
+   /*     TOP CONTENT     */
+   
+   .top-content{
+      &__title{
+         font-size: 24px;
+         line-height: 36px;
+      }
+      &__text{
+         font-size: 14px;
+         line-height: 21px;
+      }
    }
-   &__text{
+   // ==========    ABOUT AUTOR      ==========
+.about-autor {
+   &__inner{
+      padding: 0;
+   }
+   &__info{
+      max-width: 320px;
+      padding: 0;
+   }
+   &__contacts{
+      width: auto;
+   }
+   &__qr{
+      margin-bottom: 20px;
+      margin-right: 0;
+   }
+   &__data{
       font-size: 14px;
-      line-height: 21px;
    }
 }
+}
+@media (max-width: 1400px){
 
-@media (max-width:1235px){
+}
+
+@media (max-width:1250px){
    
 }
 
