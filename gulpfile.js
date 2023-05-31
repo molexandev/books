@@ -68,18 +68,18 @@ function scripts() {
    .pipe(browserSync.stream())
 }
 
-function sprite() {
-   return src('app/images/*.svg')
-      .pipe(svgSprite({
-         mode: {
-            stack: {
-               sprite: '../sprite.svg',
-               example: true
-            }
-         }
-      }))
-      .pipe(dest('app/images'))
-}
+// function sprite() {
+//    return src('app/images/*.svg')
+//       .pipe(svgSprite({
+//          mode: {
+//             stack: {
+//                sprite: '../sprite.svg',
+//                example: true
+//             }
+//          }
+//       }))
+//       .pipe(dest('app/images'))
+// }
 
 function images() {
    return src(['app/images/src/*.*', '!app/images/src/*.svg'])
