@@ -1,21 +1,25 @@
 html,
-body{
+body {
    height: 100%;
 }
+
 body {
    display: flex;
    flex-direction: column;
    @extend %inter-400;
 }
-.container{
+
+.container {
    max-width: 1470px;
    padding: 0 15px;
    margin: 0 auto;
 }
-.main{
-   flex: 1 0 auto; 
+
+.main {
+   flex: 1 0 auto;
 }
-.title{
+
+.title {
    @extend %cardo-400;
    font-size: 42px;
    line-height: 50px;
@@ -25,7 +29,8 @@ body {
    padding-bottom: 23px;
    margin-bottom: 70px;
    position: relative;
-   &::after{
+
+   &::after {
       content: '';
       position: absolute;
       width: 50px;
@@ -35,4 +40,5 @@ body {
       background-color: $accent;
    }
 }
+
 /* =============================*/

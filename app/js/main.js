@@ -1,4 +1,11 @@
 $(function () {
+    // FooterSlideToggle
+
+    $(".footer-top__title-click").on("click", function () {
+        $(this).toggleClass("footer-top--active");
+        $(this).next().slideToggle();
+    });
+
     // fadeInUp
 
     (function () {
@@ -20,6 +27,52 @@ $(function () {
         });
 
         observer.observe(square);
+    })();
+
+    // fadeInRight
+
+    (function () {
+        var cupImage = document.querySelector(".get-book__img-box");
+
+        var observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (
+                    typeof getCurrentAnimationPreference === "function" &&
+                    !getCurrentAnimationPreference()
+                ) {
+                    return;
+                }
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate__fadeInRight");
+                }
+            });
+        });
+
+        observer.observe(cupImage);
+    })();
+
+    // fadeInRLeft
+
+    (function () {
+        var infoBox = document.querySelector(".get-book__info");
+
+        var observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (
+                    typeof getCurrentAnimationPreference === "function" &&
+                    !getCurrentAnimationPreference()
+                ) {
+                    return;
+                }
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate__fadeInLeft");
+                }
+            });
+        });
+
+        observer.observe(infoBox);
     })();
 
     // img-animated
@@ -71,38 +124,38 @@ $(function () {
         observer.observe(fadeIn);
     })();
 
+    // flipX
 
+    (function () {
+        var flipChapters1 = document.querySelector(".flip-x__1");
+        var flipChapters2 = document.querySelector(".flip-x__2");
+        var flipChapters3 = document.querySelector(".flip-x__3");
+        var flipChapters4 = document.querySelector(".flip-x__4");
+        var subscriptionWrapper = document.querySelector(
+            ".subscription__wrapper"
+        );
 
+        var observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (
+                    typeof getCurrentAnimationPreference === "function" &&
+                    !getCurrentAnimationPreference()
+                ) {
+                    return;
+                }
 
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate__flipInX");
+                }
+            });
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        observer.observe(flipChapters1);
+        observer.observe(flipChapters2);
+        observer.observe(flipChapters3);
+        observer.observe(flipChapters4);
+        observer.observe(subscriptionWrapper);
+    })();
 
     $(".menu__btn").on("click", function () {
         $(".menu__items").toggleClass("menu__items--active");

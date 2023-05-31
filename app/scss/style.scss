@@ -4,13 +4,15 @@
 @import 'reset';
 @import 'global';
 
-.header{
+.header {
+   background-color: $default;
    position: fixed;
    top: 0;
    left: 0;
    right: 0;
    z-index: 1000;
-   &__wrapper{
+
+   &__wrapper {
       background-color: $default;
       max-width: 1440px;
       height: 110px;
@@ -19,84 +21,102 @@
       justify-content: space-between;
       align-items: center;
    }
-   &__left{
+
+   &__left {
       display: flex;
       justify-content: start;
       align-items: center;
    }
-   &__right{
+
+   &__right {
       display: flex;
       justify-content: end;
       align-items: center;
    }
-   &__btn{
+
+   &__btn {
       width: 222px;
       height: 66px;
-      @extend %btn;      
+      @extend %btn;
    }
 }
-.logo{
+
+.logo {
    margin-right: 35px;
    min-width: 119px;
 }
-.socials{
+
+.socials {
    display: flex;
    justify-content: start;
    min-width: 165px;
-   &__link{
+
+   &__link {
       margin-right: 10px;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          background-color: $hover;
          opacity: 0.5;
       }
    }
 }
-.menu{
-   &__items{
+
+.menu {
+   &__items {
       display: flex;
       justify-content: space-between;
-      
+
    }
-   &__item{
-      &:first-child{
+
+   &__item {
+      &:first-child {
          margin-left: 25px;
       }
-      &:last-child{
+
+      &:last-child {
          margin-right: 40px;
       }
    }
-   &__item + .menu__item{
+
+   &__item+.menu__item {
       margin-left: 50px;
    }
-   &__link{
+
+   &__link {
       font-size: 17px;
       line-height: 26px;
       letter-spacing: 0.17px;
       color: $textwhite;
       text-decoration: none;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          color: $accent;
       }
    }
-   &__link--active{
+
+   &__link--active {
       color: $accent;
    }
-   &__btn{
+
+   &__btn {
       display: none;
    }
 }
-.cart{
+
+.cart {
    margin-right: 50px;
 }
 
 // ==========     TOP-CONTENT     ==========
-.main{
-   padding-top: 110px;
+.main {
+   padding-top: 109px;
 }
-.top-content{
-   &__inner{
+
+.top-content {
+   background-color: $default;
+   &__inner {
       background-color: $default;
       padding: 100px 70px;
       display: flex;
@@ -104,11 +124,13 @@
       align-items: center;
       margin-bottom: 110px;
    }
-   &__left{
+
+   &__left {
       margin-left: 23px;
       margin-right: 75px;
    }
-   &__subtitle{
+
+   &__subtitle {
       @extend %cardo-400;
       font-size: 21px;
       line-height: 36px;
@@ -120,7 +142,8 @@
       margin-bottom: 10px;
       animation-duration: 1s;
       animation-delay: .2s;
-      &::before{
+
+      &::before {
          content: '';
          position: absolute;
          width: 35px;
@@ -130,7 +153,8 @@
          background-color: $accent;
       }
    }
-   &__title{
+
+   &__title {
       @extend %cardo-400;
       font-size: 64px;
       line-height: 78px;
@@ -141,7 +165,8 @@
       animation-duration: 1s;
       animation-delay: .5s;
    }
-   &__text{
+
+   &__text {
       font-size: 18px;
       line-height: 28px;
       color: $text-color;
@@ -150,18 +175,21 @@
       animation-duration: 1s;
       animation-delay: .7s;
    }
-   &__buttons{
+
+   &__buttons {
       margin-bottom: 50px;
       animation-duration: 1s;
       animation-delay: .9s;
    }
-   &__btn{
+
+   &__btn {
       width: 222px;
       height: 66px;
       @extend %btn;
       margin-right: 50px;
    }
-   &__link{
+
+   &__link {
       @extend %cardo-400;
       font-size: 19px;
       line-height: 30px;
@@ -174,21 +202,25 @@
       text-decoration: none;
       border-bottom: 1px solid #fff;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          color: $accent;
          border-bottom: 1px solid $accent;
       }
    }
-   &__info{
+
+   &__info {
       display: flex;
       justify-content: space-between;
       animation-duration: 1s;
       animation-delay: 1.5s;
    }
-   &__item{
+
+   &__item {
       padding-left: 26px;
       position: relative;
-      &::before{
+
+      &::before {
          content: '';
          position: absolute;
          width: 16px;
@@ -199,7 +231,8 @@
          background-color: $accent;
       }
    }
-   &__item-title{
+
+   &__item-title {
       @extend %cardo-400;
       font-size: 24px;
       line-height: 29px;
@@ -207,70 +240,80 @@
       color: #FFFFFF;
       margin-bottom: 12px;
    }
-   &__item-info{
+
+   &__item-info {
       font-size: 17px;
       line-height: 27px;
       color: $text-color;
    }
-   &__right{
+
+   &__right {
       max-width: 592px;
       max-height: 800px;
       animation-duration: 1s;
       animation-delay: .2s;
    }
-   &__img{
+
+   &__img {
       height: 800px;
    }
 }
 
 // ==========    AUTORS BOOK      ==========
-
 .autors-books {
    &__inner {
       padding: 0 70px;
-	}
-	&__items {
+   }
+
+   &__items {
       display: flex;
       justify-content: space-between;
       gap: 15px;
       margin-bottom: 150px;
-	}
-	&__item {
+   }
+
+   &__item {
       display: flex;
       justify-content: space-between;
       align-items: center;
       min-height: 500px;
-	}
-	&__img-inner {
+   }
+
+   &__img-inner {
       margin-right: 30px;
       min-width: 285px;
-	}
-	&__img {
+   }
+
+   &__img {
       width: 285px;
       height: 382px;
       object-fit: contain
-	}
-	&__subtitle {
+   }
+
+   &__subtitle {
       @extend %cardo-400;
       font-size: 32px;
       line-height: 38px;
       letter-spacing: 0.32px;
       color: $default;
       margin-bottom: 7px;
-	}
-	&__price {
+   }
+
+   &__price {
       font-size: 21px;
       line-height: 33px;
       color: $accent;
       margin-bottom: 17px;
-	}
-	&__text {
+   }
+
+   &__text {
       font-size: 19px;
       line-height: 28px;
       color: #969AA0;
       margin-bottom: 13px;
-	}
-	&__kind {
+   }
+
+   &__kind {
       @extend %cardo-400;
       font-size: 24px;
       line-height: 29px;
@@ -278,7 +321,8 @@
       padding-left: 26px;
       margin-bottom: 27px;
       position: relative;
-      &::before{
+
+      &::before {
          content: '';
          position: absolute;
          width: 16px;
@@ -288,34 +332,36 @@
          border-radius: 50%;
          background-color: $accent;
       }
-	}
-	&__btn {
+   }
+
+   &__btn {
       width: 206px;
       height: 66px;
       border: 2px solid $accent;
       @extend %cardo-400;
       font-size: 19px;
-      line-height: 28px;     
+      line-height: 28px;
       letter-spacing: 0.38px;
       color: $default;
       background-color: inherit;
       cursor: pointer;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          background-color: $accent;
          border: 2px solid $default;
       }
-	}
+   }
 }
 
 // ==========    ABOUT AUTOR      ==========
-
 .about-autor {
-   .img-animated{
+   .img-animated {
       bottom: 50px;
       right: 50px;
       transition: all 3s;
    }
+
    &__inner {
       background-color: $textwhite;
       display: flex;
@@ -323,6 +369,7 @@
       padding: 140px 70px;
       margin-bottom: 110px;
    }
+
    &__autor {
       min-width: 545px;
       height: 640px;
@@ -330,6 +377,7 @@
       position: relative;
       margin-right: 150px;
    }
+
    &__img {
       min-width: 525px;
       height: 620px;
@@ -339,6 +387,7 @@
       bottom: 0px;
       filter: drop-shadow(0px 0px 20px rgba(27, 55, 100, 0.3));
    }
+
    &__title {
       @extend %cardo-400;
       font-size: 42px;
@@ -349,7 +398,8 @@
       padding-bottom: 23px;
       margin-bottom: 33px;
       position: relative;
-      &::before{
+
+      &::before {
          content: '';
          position: absolute;
          width: 50px;
@@ -359,36 +409,43 @@
          left: 0;
       }
    }
+
    &__text {
       font-size: 19px;
       line-height: 34px;
       color: $textgray;
       margin-bottom: 33px;
    }
+
    &__indexes {
       display: flex;
       justify-content: space-between;
       margin-bottom: 55px;
    }
+
    &__index {
       min-width: 169px;
       padding-right: 30px;
       border-right: 1px solid $accent;
    }
-   &__index:last-child{
+
+   &__index:last-child {
       border-right: none;
    }
+
    &__quantity {
       @extend %cardo-400;
       font-size: 54px;
       line-height: 77px;
       color: $default;
    }
+
    &__quantity-info {
       font-size: 17px;
       line-height: 22px;
       color: $textgray;
    }
+
    &__contacts {
       display: flex;
       justify-content: start;
@@ -397,11 +454,13 @@
       padding: 15px 20px;
       background-color: $default;
    }
+
    &__qr {
       width: 130px;
       height: 130px;
       margin-right: 40px;
    }
+
    &__data {
       font-size: 18px;
       line-height: 28px;
@@ -409,47 +468,55 @@
       color: $text-color;
       padding: 15px 0;
    }
-   &__name {      
+
+   &__name {
       @extend %cardo-400;
       font-size: 22px;
       line-height: 26px;
       color: $accent;
       margin-bottom: 10px;
    }
+
    &__mail {
       margin-bottom: 5px;
    }
+
    &__link {
       color: $text-color;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          color: $hover;
       }
    }
 }
 
 // ==========    PARTNERS      ==========
-
 .partners.animate__animated {
    animation-duration: 3s;
 }
+
 .partners {
-   &__title{
+   &__title {
       margin-bottom: 50px;
    }
+
    &__inner {
       display: flex;
       justify-content: space-between;
       margin-bottom: 130px;
    }
+
    &__item {
       text-align: center;
       max-width: 313px;
    }
+
    &__img {
       margin: 0 auto;
       margin-bottom: 20px;
    }
+
    &__subtitle {
       @extend %cardo-400;
       font-size: 24px;
@@ -458,6 +525,7 @@
       color: $default;
       margin-bottom: 16px;
    }
+
    &__text {
       font-size: 19px;
       line-height: 28px;
@@ -467,19 +535,20 @@
 }
 
 // ==========    GET BOOK      ==========
-
 .get-book {
    &__inner {
       background-color: $default;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 70px; 
+      padding: 70px;
       margin-bottom: 120px;
    }
+
    &__info {
       width: 610px;
    }
+
    &__title {
       @extend %cardo-400;
       font-size: 45px;
@@ -489,7 +558,8 @@
       padding-bottom: 24px;
       margin-bottom: 27px;
       position: relative;
-      &::before{
+
+      &::before {
          content: '';
          position: absolute;
          bottom: 0;
@@ -499,12 +569,14 @@
          background-color: $accent;
       }
    }
+
    &__text {
       font-size: 19px;
       line-height: 28px;
       color: $text-color;
       margin-bottom: 27px;
    }
+
    &__btn {
       @extend %cardo-400;
       background-color: inherit;
@@ -518,31 +590,33 @@
       border: 1px solid $accent;
       cursor: pointer;
       transition: all .2s;
-         &:hover{
-            background-color: $hover;
-         }
+
+      &:hover {
+         background-color: $hover;
+      }
    }
 }
 
 // ==========    LEARNING      ==========
-
 .learning {
-   .img-animated{
+   .img-animated {
       bottom: 50px;
       right: 50px;
       transition: all 3s;
    }
-   &__title{
+
+   &__title {
       margin-bottom: 110px;
    }
+
    &__inner {
       padding: 0 70px;
       margin-bottom: 140px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-height: 651px;
    }
+
    &__items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -551,11 +625,13 @@
       justify-content: start;
       align-content: center;
    }
+
    &__item {
       background-color: #F4F8FF;
       width: 303px;
       height: 272px;
    }
+
    &__num {
       width: 50px;
       height: 50px;
@@ -570,6 +646,7 @@
       align-items: center;
       margin: 30px 0 30px 30px;
    }
+
    &__text {
       @extend %cardo-400;
       font-size: 24px;
@@ -577,12 +654,14 @@
       color: $default;
       padding-left: 30px;
    }
+
    &__img-box {
       position: relative;
       width: 535px;
       height: 632px;
       border: 10px solid $accent;
    }
+
    &__img {
       position: absolute;
       bottom: 0;
@@ -594,13 +673,13 @@
 }
 
 // ==========    CHAPTERS      ==========
-
 .chapters {
    &__inner {
       padding: 130px 70px 120px;
       margin-bottom: 120px;
       background-color: #F4F8FF;
    }
+
    &__items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -608,10 +687,12 @@
       grid-gap: 40px 30px;
       margin-bottom: 60px;
    }
+
    &__item {
       background-color: #fff;
       padding: 40px 40px 35px;
    }
+
    &__subtitle {
       @extend %cardo-400;
       font-size: 24px;
@@ -619,23 +700,27 @@
       color: $default;
       margin-bottom: 21px;
    }
+
    &__text {
       font-size: 19px;
       line-height: 32px;
       color: $textgray;
       margin-bottom: 10px;
    }
+
    &__quantity {
       display: flex;
       justify-content: start;
       gap: 45px;
    }
+
    &__quantity-item {
       display: flex;
       gap: 10px;
       padding-left: 26px;
       position: relative;
-      &::before{
+
+      &::before {
          content: '';
          position: absolute;
          width: 16px;
@@ -646,18 +731,21 @@
          border-radius: 50%;
       }
    }
+
    &__deskr {
       @extend %cardo-400;
       font-size: 22px;
       line-height: 31px;
       color: $default
    }
+
    &__num {
       font-size: 17px;
       line-height: 27px;
       color: $textgray;
       padding-top: 4px;
    }
+
    &__btn {
       width: 429px;
       height: 76px;
@@ -674,11 +762,13 @@
       border: none;
       cursor: pointer;
       transition: all .2s;
-         &:hover{
-            color: $accent;
-            background-color: $hover;
-         }
+
+      &:hover {
+         color: $accent;
+         background-color: $hover;
+      }
    }
+
    &__description {
       text-align: center;
       margin: 0 auto;
@@ -686,6 +776,7 @@
       line-height: 28px;
       color: $textgray;
    }
+
    &__contact {
       font-size: 19px;
       line-height: 28px;
@@ -693,19 +784,19 @@
       letter-spacing: 0.19px;
       color: $textgray;
    }
+
    &__link {
       font-size: 19px;
       color: $default;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          color: $hover;
       }
    }
 }
 
 // ==========    RESPONSE      ==========
-
-
 .readers {
    &__inner {
       padding: 120px 70px 130px;
@@ -713,8 +804,9 @@
       justify-content: space-between;
       align-items: center;
    }
+
    &__title {
-      @extend %cardo-400;  
+      @extend %cardo-400;
       font-size: 42px;
       line-height: 50px;
       text-transform: capitalize;
@@ -723,7 +815,8 @@
       padding-bottom: 23px;
       position: relative;
       margin-bottom: 33px;
-      &::after{
+
+      &::after {
          content: '';
          position: absolute;
          width: 50px;
@@ -733,6 +826,7 @@
          background-color: $accent;
       }
    }
+
    &__text {
       font-size: 19px;
       line-height: 34px;
@@ -740,21 +834,25 @@
       max-width: 435px;
       margin-bottom: 13px;
    }
+
    &__rating {
       position: relative;
       margin-bottom: 12px;
    }
-   &__rating-info{
+
+   &__rating-info {
       position: absolute;
       left: 130px;
       top: 0;
    }
+
    &__customers {
       font-size: 18px;
       line-height: 28px;
       color: $default;
    }
 }
+
 .response {
    display: flex;
    flex-direction: column;
@@ -765,38 +863,44 @@
    height: 604px;
    gap: 20px;
    overflow: hidden;
+
    &__item {
       width: 381px;
       height: 292px;
       background-color: $default;
    }
+
    &__top {
       display: flex;
       justify-content: start;
       align-items: center;
       margin-bottom: 20px;
    }
+
    &__img {
       width: 85px;
       height: 85px;
       object-fit: cover;
       margin: 30px 20px 0 35px;
    }
+
    &__name {
-      @extend %cardo-400;  
+      @extend %cardo-400;
       font-size: 24px;
       line-height: 29px;
       color: #FFF;
       margin-bottom: 15px;
    }
+
    &__title {
-      @extend %cardo-400;  
+      @extend %cardo-400;
       font-size: 22px;
       line-height: 33px;
       color: #FFF;
       margin-bottom: 13px;
       margin-left: 35px;
    }
+
    &__text {
       font-size: 18px;
       line-height: 29px;
@@ -808,30 +912,30 @@
 }
 
 // ==========    ARTICLES      ==========
-
-
 .articles {
    &__wrapper {
       background-color: #f4f8ff;
-      padding: 110px 70px;
+      padding: 110px 30px;
       margin-bottom: 120px;
    }
+
    &__inner {
       display: flex;
       justify-content: space-between;
    }
+
    &__item {
       max-width: 420px;
       background-color: #fff;
    }
+
    &__img {
-      width: 420px;
-      height: 350px;
       object-fit: cover;
       margin-bottom: 25px;
    }
+
    &__subtitle {
-      @extend %cardo-400;  
+      @extend %cardo-400;
       font-size: 24px;
       line-height: 34px;
       letter-spacing: 0.24px;
@@ -840,10 +944,12 @@
       width: 330px;
       margin-bottom: 19px;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          color: $hover;
       }
    }
+
    &__text {
       font-size: 19px;
       line-height: 30px;
@@ -852,14 +958,16 @@
       max-width: 358px;
       margin-bottom: 13px;
    }
-   &__info-box{
+
+   &__info-box {
       display: flex;
       justify-content: space-between;
       padding: 0 30px;
       margin-bottom: 30px;
    }
+
    &__readmore {
-      @extend %cardo-400;  
+      @extend %cardo-400;
       font-size: 19px;
       line-height: 23px;
       letter-spacing: 0.38px;
@@ -868,11 +976,13 @@
       border-bottom: 2px solid $default;
       padding-right: 9px;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          color: $hover;
          border-bottom: 2px solid $hover;
       }
    }
+
    &__date {
       font-size: 16px;
       line-height: 26px;
@@ -881,7 +991,6 @@
 }
 
 // ==========    SUBSCRIPTION      ==========
-
 .subscription {
    &__wrapper {
       margin: 0 70px 120px;
@@ -889,13 +998,16 @@
       text-align: center;
       background-color: $accent;
    }
+
    &__title {
       margin-bottom: 25px;
       position: relative;
-      &::after{
+
+      &::after {
          background-color: $default;
       }
    }
+
    &__text {
       font-size: 18px;
       line-height: 28px;
@@ -903,9 +1015,11 @@
       max-width: 550px;
       margin: 0 auto 50px;
    }
+
    &__form {
       padding-bottom: 115px;
    }
+
    &__input {
       width: 656px;
       height: 70px;
@@ -913,12 +1027,14 @@
       padding: 20px 40px;
       outline: none;
    }
-   &__input[placeholder]{
+
+   &__input[placeholder] {
       font-size: 18px;
       line-height: 31px;
       letter-spacing: 0.18px;
       color: $text-color;
    }
+
    &__btn {
       width: 328px;
       height: 70px;
@@ -931,39 +1047,49 @@
       color: #fff;
       transition: all .2s;
       cursor: pointer;
-      &:hover{
+
+      &:hover {
          background-color: $hover;
       }
    }
 }
 
 // ==========     FOOTER     ==========
+.footer {
+   background-color: $default;
+}
 
-.footer-wrapper{
+.footer-wrapper {
    background-color: $default;
    padding: 60px 70px 0;
 }
+
 .footer-top {
    display: flex;
    justify-content: space-between;
-	&__socials {
+
+   &__socials {
       display: flex;
       justify-content: start;
       gap: 10px;
-	}
-	&__title {
+   }
+
+   &__title {
       @extend %cardo-400;
       font-size: 24px;
       line-height: 34px;
       letter-spacing: 0.384px;
       color: #FFF;
       margin-bottom: 24px;
-	}
-	&__list-item {
+      pointer-events: none;
+   }
+
+   &__list-item {
       margin-bottom: 10px;
       padding-left: 29px;
       position: relative;
-      &::after{
+
+      &::after {
          content: '';
          position: absolute;
          left: 0;
@@ -973,26 +1099,31 @@
          width: 18px;
          height: 4px;
       }
-	}
-	&__link {
+   }
+
+   &__link {
       font-size: 18px;
       line-height: 31px;
       letter-spacing: 0.18px;
       color: $text-color;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          color: $hover;
       }
-	}
-	&__contact-block {
+   }
+
+   &__contact-block {
       margin-bottom: 28px;
       display: flex;
       justify-content: start;
-      &:last-child{
+
+      &:last-child {
          margin-bottom: 0;
       }
-	}
-	&__subtitle {
+   }
+
+   &__subtitle {
       @extend %cardo-400;
       font-size: 18px;
       line-height: 27px;
@@ -1001,38 +1132,44 @@
       display: block;
       min-width: 80px;
       margin-right: 17px;
-	}
-	&__contacts {
+   }
+
+   &__contacts {
       font-size: 17px;
       line-height: 27px;
       color: $text-color;
       max-width: 234px;
       display: inline-block;
-	}
+   }
 }
 
 .footer-bottom {
-	&__inner {
+   &__inner {
       display: flex;
       justify-content: center;
-	}
-	&__item {
-         font-size: 17px;
-         line-height: 26px;
-         text-align: center;
-         letter-spacing: 0.17px;
-         padding: 25px 0;
-	}
-	&__drafter {
+   }
+
+   &__item {
+      font-size: 17px;
+      line-height: 26px;
+      text-align: center;
+      letter-spacing: 0.17px;
+      padding: 25px 0;
+   }
+
+   &__drafter {
       color: $text-color;
-	}
-	&__person {
+   }
+
+   &__person {
       color: #FFFFFF;
       transition: all .2s;
-      &:hover{
+
+      &:hover {
          color: $hover;
       }
 
-	}
+   }
 }
+
 @import 'media';
