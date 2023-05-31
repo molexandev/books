@@ -1,9 +1,44 @@
+html,
 body {
-   min-height: 100vh;
+   height: 100%;
 }
-.container{
+
+body {
+   display: flex;
+   flex-direction: column;
+   @extend %inter-400;
+}
+
+.container {
    max-width: 1470px;
    padding: 0 15px;
    margin: 0 auto;
 }
+
+.main {
+   flex: 1 0 auto;
+}
+
+.title {
+   @extend %cardo-400;
+   font-size: 42px;
+   line-height: 50px;
+   text-align: center;
+   text-transform: capitalize;
+   color: $default;
+   padding-bottom: 23px;
+   margin-bottom: 70px;
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      bottom: 0;
+      left: 48%;
+      background-color: $accent;
+   }
+}
+
 /* =============================*/
