@@ -157,8 +157,9 @@ $(function () {
         observer.observe(subscriptionWrapper);
     })();
 
-    $(".menu__btn").on("click", function () {
+    $(".menu__btn, .menu a").on("click", function () {
         $(".menu__items").toggleClass("menu__items--active");
+        $("body").toggleClass("lock");
     });
 
     $(".response__rating").rateYo({
@@ -177,5 +178,12 @@ $(function () {
         normalFill: "transparent",
         starWidth: "20px",
         spacing: "5px",
+    });
+
+    $("#menu").on("click", "a", function (e) {
+        e.preventDefault();
+        var id = $(this).attr("href"),
+            top = $(id).offset().top;
+        $("body,html").animate({ scrollTop: top }, 1500);
     });
 });
