@@ -415,12 +415,16 @@
       line-height: 34px;
       color: $textgray;
       margin-bottom: 33px;
+      animation-duration: 1s;
+      animation-delay: .5s;
    }
 
    &__indexes {
       display: flex;
       justify-content: space-between;
       margin-bottom: 55px;
+      animation-duration: 1s;
+      animation-delay: 1s;
    }
 
    &__index {
@@ -453,6 +457,8 @@
       height: 160px;
       padding: 15px 20px;
       background-color: $default;
+      animation-duration: 1s;
+      animation-delay: 1.5s;
    }
 
    &__qr {
@@ -499,12 +505,14 @@
 .partners {
    &__title {
       margin-bottom: 50px;
+      animation-duration: 1s;
    }
 
    &__inner {
       display: flex;
       justify-content: space-between;
       margin-bottom: 130px;
+      animation-delay: .5s;
    }
 
    &__item {
@@ -686,6 +694,7 @@
       grid-template-rows: repeat(2, 1fr);
       grid-gap: 40px 30px;
       margin-bottom: 60px;
+      animation-delay: .5s;
    }
 
    &__item {
@@ -762,11 +771,14 @@
       border: none;
       cursor: pointer;
       transition: all .2s;
-
+      animation-delay: 1s;
       &:hover {
          color: $accent;
          background-color: $hover;
       }
+   }
+   &__info{
+      animation-delay: 1.5s;
    }
 
    &__description {
@@ -864,6 +876,15 @@
    gap: 20px;
    overflow: hidden;
 
+   &__block1{
+      animation-delay: .5s;
+   }
+   &__block2{
+      animation-delay: 1s;
+   }
+   &__block3{
+      animation-delay: 1.5s;
+   }
    &__item {
       width: 381px;
       height: 292px;
@@ -922,6 +943,7 @@
    &__inner {
       display: flex;
       justify-content: space-between;
+      animation-delay: .5s;
    }
 
    &__item {
