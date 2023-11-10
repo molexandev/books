@@ -53,7 +53,7 @@ $(function () {
 wow = new WOW({
     boxClass: "wow",
     animateClass: "animate__animated",
-    offset: 0,
+    offset: 75,
     mobile: true,
     live: true,
 });

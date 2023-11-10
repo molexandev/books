@@ -444,17 +444,21 @@
 
 @media (max-width:992px) {
    .header {
+      &__wrapper{
+         height: 65px;
+      }
       &__btn {
          width: 130px;
          height: 35px;
          font-size: 10px;
       }
    }
-
+   .main{
+      padding-top: 65px;
+   }
    .logo {
       margin-right: 15px;
    }
-
    .socials {
       min-width: 105px;
 
@@ -463,7 +467,6 @@
          height: 25px;
       }
    }
-
    .menu {
       &__item+.menu__item {
          margin-left: 12px;
@@ -477,7 +480,6 @@
          margin-left: 5px;
       }
    }
-
    .cart {
       margin-right: 20px;
    }
@@ -614,7 +616,6 @@
          padding: 30px 15px;
       }
    }
-
    .response {
       margin: 0 auto;
       width: 721px;
@@ -646,7 +647,6 @@
    .footer-wrapper {
       padding: 50px 20px 0;
    }
-
    .footer-top {
       justify-content: space-around;
 
@@ -676,11 +676,9 @@
       position: relative;
       z-index: 1;
    }
-
    .title {
       font-size: 36px;
    }
-
    .menu {
       &__items {
          overflow: auto;
@@ -823,27 +821,18 @@
       &__title {
          font-size: 28px;
          margin-bottom: 20px;
-
          &::after {
             left: 40%;
          }
       }
-
       &__subtitle {
          font-size: 24px;
       }
-
-      &__item {
-         flex-wrap: wrap;
-         margin-bottom: 30px;
-      }
-
       &__img-inner {
          margin-right: 20px;
          margin-bottom: 30px;
          min-width: 235px;
       }
-
    }
 
    // ==========    ABOUT AUTOR      ==========
@@ -1017,13 +1006,13 @@
          display: none;
       }
    }
+
 }
 
 @media (max-width:550px) {
    .socials {
       display: none;
    }
-
    .header {
       &__wrapper {
          flex-wrap: wrap;
@@ -1034,17 +1023,14 @@
          width: 90px;
       }
    }
-
    .menu {
       &__btn {
          margin-left: 10px;
       }
    }
-
    .cart {
       margin-right: 10px;
    }
-
    .learning {
       &__items {
          margin-right: 0;
@@ -1069,14 +1055,18 @@
          padding: 0 15px;
       }
    }
-
+   .autors-books{      
+      &__item {
+         flex-wrap: wrap;
+         margin-bottom: 30px;
+      }
+   }
    .chapters {
       &__btn {
          width: 230px;
          font-size: 16px;
       }
    }
-
    .readers {
       &__title {
          font-size: 36px;
@@ -1086,7 +1076,6 @@
          }
       }
    }
-
    .articles {
       &__wrapper {
          padding: 50px 0px;
